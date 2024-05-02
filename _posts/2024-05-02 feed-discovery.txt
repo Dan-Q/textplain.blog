@@ -1,0 +1,17 @@
+Without a <link rel="alternate" type="application/rss+xml" href="https://textplain.blog/feed">, RSS
+readers might fail to autodiscover the RSS feed URL of a blog. That's challenging when your content
+is all delivered in text/plain, because you can't HAVE a tag like that!
+
+There's an alternative solution which I've implemented here - a Link: HTTP header. If you check the
+HTTP headers sent by this site, you'll see this one -
+
+Link: <https://textplain.blog/feed>; rel="alternate"; type="application/rss+xml"
+
+That's the HTTP equivalent of the HTML element described above. Sadly, it doesn't seem to work well
+in any of the RSS readers I've tried, but if it works in yours, I'd love for you to get in touch[1]
+and tell me about it!
+
+Links
+-----
+
+[1] https://danq.me/contact

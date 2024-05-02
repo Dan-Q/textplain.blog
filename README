@@ -1,0 +1,10 @@
+An experimental blog engine designed to deliver only plain-text content.
+
+See it in use at: https://textplain.blog/
+
+To use, you'll need a webserver running PHP, configured to map all requests to index.php.
+
+Put posts in the _posts/ directory, using the filename syntax "0000-00-00 slug-goes-here.txt". Files
+are reverse-sorted before listing, so you can use ISO8601 dates. Slugs must be unique.
+
+RSS feed will be served at /feed.

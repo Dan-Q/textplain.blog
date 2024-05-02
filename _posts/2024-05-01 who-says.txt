@@ -1,0 +1,21 @@
+Who says a blog post has to have a title?
+
+In his blog post on 2 May 2024[1], Terence Eden observes that the HTML specification requires that
+a web page has to have a <title> (even if that title is empty, which it really shouldn't be!). But
+arguing that this implies that a blog post must have a title presupposes that a blog post can only
+be written in HTML...
+
+Who says that a blog post... or a blog at all!... must be written in HTML?
+
+I'm Dan Q[2], and this is an experimental blog and blogging engine delivered through the medium of
+plain text. There's one exception: the RSS feed[3] (which is of course XML); whether or not RSS is
+a requirement of a blog is yet another question, of course!
+
+You can subscribe if you like, but the odds of a long ongoing post history here is pretty slim!
+
+Links
+-----
+
+[1] https://shkspr.mobi/blog/2024/05/49911/
+[2] https://danq.me/
+[3] https://textplain.blog/feed/
