@@ -35,7 +35,7 @@ if( preg_match( '/^\/feed\/?$/', $_SERVER['REQUEST_URI'] ) ) {
 if( preg_match( '/^\/([a-z0-9_-]+)(\/|\.txt)?$/', $_SERVER['REQUEST_URI'], $matches ) ) {
   $matching_posts = preg_grep( "/\d{4}-\d{2}-\d{2} {$matches[1]}+\.txt/", $posts );
   if( count( $matching_posts ) == 1 ) {
-    readfile( $matching_posts[0] );
+    readfile( current( $matching_posts ) );
     echo "\n----------------------------------------------------------------------------------------------------\nThis post appeared on https://textplain.blog/";
     exit;
   }
