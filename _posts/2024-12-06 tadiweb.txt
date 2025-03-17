@@ -1,0 +1,3 @@
+Making a website that's plain text is tadiweb-compliant. F'real. Look:
+
+https://www.tadiweb.com/text.txt

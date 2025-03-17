@@ -1,0 +1,47 @@
+You might argue that a plain text blog is pretty low on features. But that, in
+itself, might actually be considered a feature! There's a beautiful simplicity
+and minimalism to a plain text blog. I've written about the benefits - to e.g.
+performance, security, and accessibility - that a plain text blog provides, at
+https://textplain.blog/benefits
+
+Sure, there are limitations too, but there may be workarounds. Have a point to
+illustrate? How about ASCII art! It's not great for screenreaders, but so long
+as you give a good description (the equivalent of alt-text, which you're using
+on HTML pages already, right... right!?) it should be... tolerable? Yeah?
+
+For example, the next 11 lines reveal a picture of a phoenix soaring up on its
+firey wings:
+
+                            .\\            //.
+                           . \ \          / /.
+                           .\  ,\     /` /,.-
+                            -.   \  /'/ /  .
+                            ` -   `-'  \  -
+                              '.       /.\`
+                                 -    .-
+                                 :`//.'
+                                 .`.'
+                                 .'
+
+I specified the number of lines to give somebody a screen reader at least SOME
+change of skipping ahead rather than reading out all of the underscores, dots,
+backticks, and dashes that make up the picture. I'm unsure' how effective that
+strategy is in real life. Anybody?
+
+Or perhaps you want to lay your content out in some way. Like perhaps a table!
+Here's a table showing how text/plain Web pages are just as good as HTML-based
+pages in every conceivable way, and better in some:
+
+        .---------------------------------------.------.-----------.
+        |                Feature                | HTML |   Text    |
+        :---------------------------------------+------+-----------:
+        | Works on the web                      | Yes  | Yes       |
+        :---------------------------------------+------+-----------:
+        | Can have images and tables            | Yes  | Kinda...? |
+        :---------------------------------------+------+-----------:
+        | Avoids cross-domain JS-based tracking | No!  | Yes       |
+        '---------------------------------------'------'-----------'
+
+This post should to be taken as being at least a little sarcastic. But some of
+its points are valid: sometimes you DON'T need HTML. Sometimes using ASCII and
+nothing else... is sufficient.

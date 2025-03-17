@@ -1,0 +1,17 @@
+Terence Eden has implemented a WordPress theme which makes it much-easier to run a plain text blog!
+This CMS remains a much more-lightweight way to make a text/plain-only blog, of course, but I can't
+deny that doing this in WordPress is pretty damn cool.
+
+He's also managed to make it so that you can convert almost any page on his blog by simply adding a
+.txt suffix to the URL. I assume it's powered by much the same technology.
+
+Anyway, go check out his amazing work at:
+https://shkspr.mobi/blog/2024/05/a-completely-plaintext-wordpress-theme/
+
+Or, I suppose:
+https://shkspr.mobi/blog/2024/05/a-completely-plaintext-wordpress-theme.txt
+
+----
+
+You also might be interested in more of my thoughts (not available in plain text, though!) at:
+https://danq.me/2024/05/09/plaintext-wordpress/

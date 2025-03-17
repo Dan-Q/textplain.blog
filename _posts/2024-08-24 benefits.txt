@@ -1,0 +1,51 @@
+One of many great things about a completely plain-text blog is the security guarantees it provides
+of your visitors. When all of your content is delivered with MIME type text/plain, you can be sure
+there's no Javascript, no third-party cookies, no fingerprinting, etc.
+
+You're even safe from buffer overruns in image libraries. Remember CVE-2023-4863? Last year, a bug
+turned up that meant that image/webp images might be able to execute arbitrary code on your system
+even if all you did was LOOK AT THE IMAGE on a web page. It's not even alone: there've been dozens
+of these kinds of issues.
+
+(Okay, I'm not naive enough to think that it's impossible that somebody might one day craft a kind
+of attack, like that, that exploits text/plain content. But it demands much more of an imaginative
+stretch to conceive of it, right?)
+
+You wanna hear another great thing about a plain-text blog? Performance! Even particularly verbose
+pages of plain text enjoy much smaller file sizes than the "equivalent" HTML, and compress just as
+well. But with no stylesheets, javascript, images, favicon, and whatever other resources you might
+find on a typical web page to worry about, it's a single round-trip for your browser. And quick to
+render too.
+
+Which also makes it perfectly usable in any browser. Visit this page in Lynx, why don't you. Hell:
+visiting it using curl provides the same level of functionality as you get anywhere else! Ignoring
+for a moment that I'm delivering it using modern HTTPS encryption standards, this page oughta work
+on basically every Web browser that's ever existed. (And it'd be easy enough to dispense with that
+HTTPS limitation and support plain old HTTP/0.9 or something if I really wanted to.)
+
+Sure, there are downsides too. The lack of clickable hyperlinks is a bit of a big one, in my mind!
+I'm not saying that everybody should be writing entirely plain text content online! But you've got
+to admit, it works!
+
+Many years ago, websites hosting hints, tips, and walkthroughs for videogames would supply most've
+their content in plain text. Which made sense: the guides - each authored by an indepdendent gamer
+who just happened to want to share their knowledge - were designed to work ANYWHERE. They ought to
+be able to be posted to a newsgroup or a BBS just as easily as they were to a centralised website.
+And these guides were - still are - often amazingly details. Great efforts were made, for example,
+to draw maps of levels using little more than ASCII art, or to lay out tables of spells or weapons
+and their effects. Authors even tried, usually, to achieve good justification in their line length
+(which you might notice I've mirrored here!) to maximise readability. That works-anywhere approach
+helped everybody. I remember once using a (cheap, simple) dot-matrix line printer (entirely unable
+to render anything other than ASCII characters) to print myself out a guide to SimCity, which then
+sat beside me at my desk for months or years. It Just Works [TM].
+
+Again, I'm not saying that this is necessarily something we should idolise or seek to emulate, but
+maybe there's something we can learn from all of this: that plain text - especially now, with UTF8
+making it possible to support virtually any language - is a perfectly good medium that we can keep
+in mind when considering the documents we make. Long after it becomes hard to find reader software
+for any other format, plain text will remain readable: in the worst case, it'd be possible to read
+pages like this one from the raw binary, with the help of an ASCII table. Which is pretty awesome.
+
+(Speaking of ASCII tables, did you see my recent blog post over on my regular blog, explaining why
+I think the ASCII table is beautiful and elegant? It's at https://danq.me/ascii if that's the kind
+of nerdity you're into.)

@@ -1,0 +1,14 @@
+.well-known/feeds[1] is a standard I proposed[2] last year to try to make it easier for websites to
+expose a list (via OPML) of their most-relevant site-wide RSS/etc. feeds. For a blog, that might be
+a feed of all of their posts, for example. Or several feeds, one of each of a variety of post types
+or content categories.
+
+The thinking is that this provides a way for sites to list feeds in a central location, independent
+of their content. Which in the case of THIS blog is especially useful because without any HTML it's
+impossible to use a conventional feed announcement strategy like a <link rel="alternate"> element.
+
+Frankly it surprises ME that it took this long before I thought to add .well-known/feeds support to
+textplain.blog, given that I proposed the standard in the first place. But I got there in the end.
+
+[1] https://github.com/Dan-Q/well-known-feeds
+[2] https://danq.me/2023/08/23/well-known-feeds/
