@@ -31,6 +31,25 @@ if( preg_match( '/^\/feed\/?$/', $_SERVER['REQUEST_URI'] ) ) {
   exit;
 }
 
+// Check for .well-known/feeds request
+if( preg_match( '/^\/\.well-known\/feeds\/?$/', $_SERVER['REQUEST_URI'] ) ) {
+  header( 'Content-type: text/x-opml' );
+  echo <<<END_OF_OPML
+<?xml version="1.0" encoding="UTF-8"?>
+<opml xmlns:frss="https://freshrss.org/opml" version="2.0">
+  <head>
+    <title>textplain.blog Feeds</title>
+    <dateCreated>Wed, 29 Aug 2024 14:22:30 +0000</dateCreated>
+  </head>
+  <body>
+    <outline text="All posts" type="rss" xmlUrl="https://textplain.blog/feed" htmlUrl="https://textplain.blog/" />
+  </body>
+</opml>
+
+END_OF_OPML;
+  exit;
+}
+
 // Check for post request:
 if( preg_match( '/^\/([a-z0-9_-]+)(\/|\.txt)?$/', $_SERVER['REQUEST_URI'], $matches ) ) {
   $matching_posts = preg_grep( "/\d{4}-\d{2}-\d{2} {$matches[1]}+\.txt/", $posts );
