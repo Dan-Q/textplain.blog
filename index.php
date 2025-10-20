@@ -60,6 +60,24 @@ if( preg_match( '/^\/([a-z0-9_-]+)(\/|\.txt)?$/', $_SERVER['REQUEST_URI'], $matc
   }
 }
 
+// Check for scroll art request:
+if( preg_match( '/^\/scroll-art-viewer\/([a-z0-9_-]+)(\/(\d+)?)?$/', $_SERVER['REQUEST_URI'], $matches ) ) {
+  if(file_exists("_scrolls/{$matches[1]}.txt")) {
+    $meta = file_get_contents("_scrolls/${matches[1]}.meta.txt"); // Load wrapper
+    $scroll = file("_scrolls/{$matches[1]}.txt"); // Load the pre-rendered scroll art
+    $page = intval($matches[3]) % count($scroll); // Determine which window to show
+    $scroll = array_merge($scroll, $scroll);      // "Loop" the scroll art near the end
+    $lines = array_slice($scroll, $page, 20);     // How many lines to show at once?
+
+    // Headers to describe as plain text and set up the redirection/animation:
+    header("Refresh: 1; /scroll-art-viewer/{$matches[1]}/" . ($page + 1));
+
+    // Wrap in the meta and output:
+    echo str_replace('[scroll]', implode('', $lines), $meta);
+    exit;
+  }
+}
+
 // Failing all the above, return 404
 header( 'HTTP/1.0 404 Not Found' );
 echo "404: Not Found\n==============\n\nThe requested URL was not found on the server.\n\nGiven that you probably had to enter the URL manually, please check your spelling and try again.\n\nOr go to https://textplain.blog/ and browse from there.";
