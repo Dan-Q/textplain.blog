@@ -1,0 +1,33 @@
+Downtime
+--------
+
+As Dan observed (https://danq.me/2025/08/29/27143/) the textplain.blog vanished
+from the Internet for a few hours today. Turns out that even a semi-static blog
+like this one can go down if, y'know, the VPS it's hosted on goes belly-up:
+
+> Last night, an undermaintained VPS of mine went kaput.
+>
+> The data’s all fine, and most of the services I was running on it came back
+> up in new homes without difficulty, but just a handful of things are still
+> down, including textplain.blog and freedeedpoll.org.uk, ugh.
+>
+> Not the best start to a Friday when I’ve got a backlog of day-job work to do.
+
+I'm not sure WHY the server stopped booting. It always landed in the UEFI shell
+and claimed it didn't have any hard drives, and neither the hypervisor nor BIOS
+could tell it otherwise. The QEMU raw hard drive image itself was fine: I could
+mount the drive into a fresh virtual machine and it worked perfectly (so that's
+exactly what I did in order to rescue the data).
+
+But I didn't just want to create a new VM exactly like the one it replaced. For
+a start, the old machine was still sitting on Debian 11 and was generally messy
+and under-maintained. Plus: running this one tiny PHP application wasn't a good
+use of the basic reverse proxy I WANTED to be maiaining. So now it's Dockerised
+and sitting behind the new proxy (now powered by Caddy) and the entire stack is
+much cleaner and happier.
+
+I do find myself wondering if this SHOULD have been a precompiled & static site
+in the first place, though. Then it could be, for example, hosted by GitHub and
+there'd be one fewer thing for me to think about. Maybe for a future iteration?
+
+For now, though, I've got OTHER sites to rescue and repair!

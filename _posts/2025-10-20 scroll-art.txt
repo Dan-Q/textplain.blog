@@ -1,0 +1,48 @@
+The Scroll Art Museum
+---------------------
+
+The Scroll Art Museum <https://scrollart.org/> demonstrates how "ASCII art" can
+be so much more than a static medium by showcasing artwork exploiting scrolling
+of text as a way of implementing basic animation. That doesn't sound as good as
+it looks when you see it for yourself: its worth a peep.
+
+A wrote a little more about the museum, and my favourite piece within it, on my
+primary blog <https://danq.me/the-scroll-art-museum>. But from a textplain.blog
+perspective it got me thinking: is there any way to achieve this kind of effect
+here on this blog, too? The museum uses JavaScript (which in turn means HTML is
+requried, at least for within a web browser) to implement the "scroller" effect
+but I find myself wondering if there might be some other way.
+
+Back before CSS came along, Web pages were more linearly-deterministic. I mean:
+you could decide how to lay out a part of a page well before the source code of
+the entire page was loaded. This was useful on the (slower) dial-up connections
+of the time, because it meant that browsers could (and did) render the HTML as-
+it-was-delivered, rather than waiting for the entire page to arrive, building a
+DOM... and then waiting (for a short time) for other assets to load to mitigate
+the "flash of unstyled content" issue (Was it actually ever SO intolerable that
+it justifies holding the user on a blank page while a typeface downloaded? I've
+always doubted that.)
+
+(This sneaky trick, plus long-lived connections, was sometimes used as a way to
+implement early Web-based chat rooms: a frame would load a page that would send
+data in dribs and drabs but NEVER FINISH loading, while a second frame was used
+to send messages TO the channel via a simple form. It was hacky as hell and yet
+somehow entirely representative of the imagination of the 1990s Internet.)
+
+Anyway: plain text CAN be rendered linearly. There's no reason a browser should
+avoid rendering the first few lines of this blog post while the rest downloads:
+it won't make an impact on how the first lines are rendered, right? Of course a
+text file usually won't be large enough for that to be an issue. But what if we
+artificially slowed-down the connection speed from the server side? Delivered a
+long text file very slowly, a line or so at a time?
+
+My bet is that modern web browsers (unnecessarily) treat such text files in the
+same way as they do Web pages: waiting for the entire thing to download without
+rendering anything until they're done. But I do wonder! I'm mostly stuck in bed
+unwell today <https://danq.me/sick-day> and I'm definitely not "with it" enough
+to do my day job (also: I keep falling asleep which is somewhat frowned-on even
+in the dullest of meetings)... but I might be able to find my way through brain
+fog enough to do a quick experiment.
+
+And if the results are interesting, I'll report back. (If I don't follow-up, it
+is safe to assume the results were as boring as I predict!)
