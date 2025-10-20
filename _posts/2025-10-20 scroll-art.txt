@@ -46,3 +46,13 @@ fog enough to do a quick experiment.
 
 And if the results are interesting, I'll report back. (If I don't follow-up, it
 is safe to assume the results were as boring as I predict!)
+
+-------------------------------------------------------------------------------
+
+Update: it didn't work... but something else did! Exploiting the Refresh header
+in HTTP to force the page to refresh with a slightly different URL, to "offset"
+the scroll position through a pre-generated piece of scroll art!
+
+Wanna see? Go to https://textplain.blog/scroll-art-viewer/pipe-swap
+
+It's moderately clunky, obviously. But it works! No JavaScript required.
