@@ -1,0 +1,27 @@
+No JS (Club)
+------------
+
+There's an online club - inspired by the likes of 1mb.club, 512k.club, and 250k.club - called the
+No JS Club <https://no-js.club/>. The idea is that for your site to be eligible for membership it
+must use no JavaScript whatsoever.
+
+Should textplain.blog count? It certainly has no JavaScript! But when I went through the steps to
+prove this blog's eligibility, I fell at the first hurdle. The instructions to demonstrate that a
+site is eligible start with running it through GMetrix to check whether any JavaScript's detected
+but GMetrix totally falls over on this site! It turns out that GMetrix is designed with the hard-
+coded EXPECTATION that the root page for a site will return content with the text/html (or a very
+similar variant) MIME type... and a site that returns with text/plain content is unusual enough I
+guess that it just... won't... run!
+
+But obviously this site DOESN'T have any JavaScript (how could it: there's no <script> element in
+plain text content!) so I submitted a ticket <https://todo.sr.ht/~shruub/no-JS.club/155> into the
+club's SourceHub account and hoped for the best.
+
+It sat there for 20 days, and for a while I thought that the account might be unmonitored, but in
+the end, earlier today, it got accepted and now this site appears in the members list: one of the
+newest members of No JS Club. Hurrah! Maintainer ~shruub said of the site "LGTM! Nice idea, added
+:)!", so that's nice too.
+
+No JS Club is a great reminder that a site does not need to have JavaScript to be perfectly good.
+And THIS site pushes that concept just a hair further, and says that it also does not need CSS or
+even HTML. Sometimes, plain text is enough.
